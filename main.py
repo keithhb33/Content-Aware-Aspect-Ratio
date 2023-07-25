@@ -31,15 +31,7 @@ class Gui:
     @staticmethod
     def run_photoshop():
         #first, determine how many images need to be produced:
-        """
-        XXX
-        XXX
-        XXX
 
-        XXXXXXXXXXXXXXXX
-        XXXXXXXXXXXXXXXX
-        XXXXXXXXXXXXXXXX
-        """
         #Essentially, need to create instances of photoshop that can use the extend tool/feature in firefly automation
 
     @staticmethod
