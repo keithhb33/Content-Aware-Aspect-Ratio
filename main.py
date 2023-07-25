@@ -16,6 +16,9 @@ if not os.path.isdir(frames_original_dir):
 if not os.path.isdir(output_dir):
     os.mkdir(output_dir)
 
+if not os.path.isdir(frames_output_dir):
+    os.mkdir(frames_output_dir)
+
 originals = [os.path.join(original_dir, file) for file in os.listdir(original_dir)]
 frames = [os.path.join(frames_original_dir, file) for file in os.listdir(frames_original_dir)]
 
@@ -30,7 +33,6 @@ class Gui:
     
     @staticmethod
     def run_photoshop():
-        #first, determine how many images need to be produced:
 
         #Essentially, need to create instances of photoshop that can use the extend tool/feature in firefly automation
 
