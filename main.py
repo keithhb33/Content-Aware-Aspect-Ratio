@@ -39,6 +39,7 @@ class Gui:
         XXXXXXXXXXXXXXXX
         XXXXXXXXXXXXXXXX
         XXXXXXXXXXXXXXXX
+        """
         #Essentially, need to create instances of photoshop that can use the extend tool/feature in firefly automation
 
     @staticmethod
