@@ -4,8 +4,8 @@ Uses content-aware image resizing to modernize 4:3 video files to a 16:9 aspect 
 
 <table>
 <tr>
-<th>16:9 Display</th>
-<th>4:3 Display</th>
+<th>Modernized 16:9 Display</th>
+<th>Original 4:3 Display</th>
 </tr>
 <tr>
 <td>
