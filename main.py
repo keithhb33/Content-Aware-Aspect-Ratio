@@ -1,6 +1,6 @@
 import os
 import cv2
-
+import time
 
 original_dir = "original"
 frames_original_dir = "frames_original"
@@ -20,7 +20,9 @@ if not os.path.isdir(frames_output_dir):
     os.mkdir(frames_output_dir)
 
 originals = [os.path.join(original_dir, file) for file in os.listdir(original_dir)]
+outputs = [os.path.join(frames_output_dir, file) for file in os.listdir(frames_output_dir)]
 frames = [os.path.join(frames_original_dir, file) for file in os.listdir(frames_original_dir)]
+
 
 class Gui:
 
@@ -30,14 +32,16 @@ class Gui:
             os.remove(frame)
         print("Removed frames")
         return frames
-    
-    @staticmethod
-    def run_photoshop():
-
-        #Essentially, need to create instances of photoshop that can use the extend tool/feature in firefly automation
 
     @staticmethod
     def process_originals():
+        
+        #Remove frames_original
+        dir = "frames_original"
+        for f in os.listdir(dir):
+            os.remove(os.path.join(dir, f))
+        time.sleep(2)
+        
         for i, original in enumerate(originals):
             video = cv2.VideoCapture(original)
             frame_number = 0
@@ -51,7 +55,20 @@ class Gui:
 
             video.release()
             
-            Gui.run_photoshop
-            #Gui.delete_existing_frames()
+#            Gui.delete_existing_frames()
+if originals != outputs:
+    Gui.process_originals()
 
-Gui.process_originals()
+import subprocess
+
+#while not (len(os.listdir("frames_original")) == len(os.listdir("frames_output"))):
+#    print("Still processing...")
+    
+if __name__ == "__main__":
+    script_name = "start_process.py"
+
+    try:
+        subprocess.run(["python", script_name], check=True)
+    except subprocess.CalledProcessError:
+        print(f"An error occurred while running {script_name}.")
+
