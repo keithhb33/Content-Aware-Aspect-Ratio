@@ -10,12 +10,16 @@ Uses content-aware image resizing to modernize 4:3 video files to a 16:9 aspect 
 <tr>
 <td>
 
-[![Watch the video](images/169idiotboxthumbnail.jpg)](https://youtu.be/Ja24xjEEhcs)
+<a href="https://youtu.be/Ja24xjEEhcs">
+    <img src="images/169idiotboxthumbnail.jpg" alt="Watch the video" height="300">
+</a>
 
 </td>
 <td>
 
-[![Watch the video](images/43idiotboxthumbnail.jpg)](https://www.youtube.com/watch?v=Da7cnYIhhfo&ab_channel=AwfulMovieShorts)
+<a href="https://www.youtube.com/watch?v=Da7cnYIhhfo&ab_channel=AwfulMovieShorts">
+    <img src="images/43idiotboxthumbnail.jpg" alt="Watch the video" height="300">
+</a>
 
 </td>
 </tr>
