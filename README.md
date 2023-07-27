@@ -1,2 +1,3 @@
 # Content-Aware-Media-Aspect-Ratio
-Use AI and Photoshop to modernize media of 4:3 aspect ratio to 16:9.
+
+Uses content-aware image resizing to port 4:3 media to a 16:9 aspect ratio.
