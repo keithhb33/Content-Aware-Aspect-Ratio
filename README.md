@@ -4,7 +4,7 @@ Uses content-aware image resizing to modernize 4:3 videos to a 16:9 aspect ratio
 
 <table>
 <tr>
-<th><a href="https://www.youtube.com/watch?v=Da7cnYIhhfo&ab_channel=AwfulMovieShorts">Original 4:3 Display</a></th>
+<th><a href="https://drive.google.com/file/d/13wTyCyZJ5w0n7JA2GdNkOXXD0atGtwcI/view?usp=sharing">Original 4:3 Display</a></th>
 <th><a href="https://youtu.be/Ja24xjEEhcs">Generated 16:9 Display</a></th>
 </tr>
 <tr>
