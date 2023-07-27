@@ -3,7 +3,6 @@
 Uses content-aware image resizing to modernize 4:3 video files to a 16:9 aspect ratio without cropping or losing data.
 
 <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap;">
-  16:9 Display
   <a href="https://youtu.be/Ja24xjEEhcs">
     <img src="images/169idiotboxthumbnail.jpg" alt="Watch the video" style="height: 260px; width: auto; margin-right: 10px;">
   </a>
