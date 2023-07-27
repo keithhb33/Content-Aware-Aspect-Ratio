@@ -10,7 +10,7 @@ Uses content-aware image resizing to modernize 4:3 videos to a 16:9 aspect ratio
 <tr>
 <td>
 
-<a href="https://www.youtube.com/watch?v=Da7cnYIhhfo&ab_channel=AwfulMovieShorts">
+<a href="https://drive.google.com/file/d/13wTyCyZJ5w0n7JA2GdNkOXXD0atGtwcI/view?usp=sharing">
     <img src="images/43idiotboxthumbnail.jpg" alt="Watch the video" height="300">
 </a>
 
