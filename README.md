@@ -34,5 +34,3 @@ Uses content-aware image resizing to modernize 4:3 videos to a 16:9 aspect ratio
 python3 main.py
 
 #Note: Frame extractions are very CPU intensive. 24 CL threads are used to complete the process. 
-
-'''
