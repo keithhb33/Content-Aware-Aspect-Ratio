@@ -30,6 +30,7 @@ Uses content-aware image resizing to modernize 4:3 videos to a 16:9 aspect ratio
 ```python3
 
 #Place .mp4 file in dir "original" (do not place more than a single file at a time)
+
 #Run the terminal command:
 python3 main.py
 
