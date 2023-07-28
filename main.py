@@ -1,6 +1,8 @@
 import os
 import cv2
 import time
+from moviepy.editor import VideoFileClip
+
 
 original_dir = "original"
 frames_original_dir = "frames_original"
@@ -23,6 +25,30 @@ originals = [os.path.join(original_dir, file) for file in os.listdir(original_di
 outputs = [os.path.join(frames_output_dir, file) for file in os.listdir(frames_output_dir)]
 frames = [os.path.join(frames_original_dir, file) for file in os.listdir(frames_original_dir)]
 
+def check_aspect_ratio(dir_path):
+    files = os.listdir(dir_path)
+    for file in files:
+        if file.endswith(".mp4"):
+            file_path = os.path.join(dir_path, file)
+            clip = VideoFileClip(file_path)
+            
+            width = clip.size[0]
+            height = clip.size[1]
+            
+            # Calculate aspect ratio
+            aspect_ratio = width / height
+
+            # Check if aspect ratio is 4:3
+            if aspect_ratio == 4/3:
+                return True
+            else:
+                return False
+    return False
+
+is_correct_aspect_ratio = check_aspect_ratio("original")
+if is_correct_aspect_ratio == False:
+    print("Make sure video is 4:3.")
+    os._exit(0)
 
 class Gui:
 
