@@ -27,7 +27,7 @@ Uses content-aware image resizing to modernize 4:3 videos to a 16:9 aspect ratio
 
 <h3>Usage:</h3>
 
-'''python3
+```python3
 
 #Place .mp4 file in dir "original" (do not place more than a single file at a time)
 #Run the terminal command:
