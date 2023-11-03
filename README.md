@@ -41,5 +41,3 @@ python3 main.py
 
 #Note: Frame extractions are very CPU intensive. 24 command-line threads are used to complete the process. 
 ```
-
-This project is a work in progress. The next steps are to remove jittering and improve consistency across content-aware stretching from frame to frame.
