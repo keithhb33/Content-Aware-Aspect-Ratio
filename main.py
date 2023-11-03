@@ -2,7 +2,8 @@ import os
 import cv2
 import time
 from moviepy.editor import VideoFileClip
-
+from numba import jit, cuda 
+import subprocess
 
 original_dir = "original"
 frames_original_dir = "frames_original"
@@ -45,10 +46,47 @@ def check_aspect_ratio(dir_path):
                 return False
     return False
 
+def crop_to_ratio(input_path):
+    # Load the video
+    clip = VideoFileClip(input_path)
+    
+    # Get video dimensions
+    width, height = clip.size
+    
+    # Calculate the new width for 4:3 aspect ratio
+    new_width = int(height * 4 / 3)
+    
+    # Calculate the amount to crop from left and right
+    crop_left = (width - new_width) // 2
+    crop_right = width - new_width - crop_left
+    
+    # Crop the video
+    cropped_clip = clip.crop(x_center=width/2, width=new_width)
+    
+    # Write the cropped video to the same input path, effectively replacing it
+    cropped_clip.write_videofile(input_path, codec='libx264')
+
+
+
 is_correct_aspect_ratio = check_aspect_ratio("original")
 if is_correct_aspect_ratio == False:
-    print("Make sure video is 4:3.")
-    os._exit(0)
+    print("Video is not 4:3")
+    crop_question = str(input("Would you like to centrally crop this video to 4:3? (y/n): "))
+    
+    if crop_question.lower() == "y":
+        directory_path = "original"
+
+        mp4_files = [f for f in os.listdir(directory_path) if f.endswith('.mp4')]
+        if mp4_files:
+            input_video_path = os.path.join(directory_path, mp4_files[0])
+            crop_to_ratio(input_video_path)
+        else:
+            print("No MP4 file found in the 'original' directory.")
+            
+            
+    os._exit()
+
+    
 
 class Gui:
 
@@ -56,17 +94,18 @@ class Gui:
     def delete_existing_frames():
         for frame in frames:
             os.remove(frame)
-        print("Removed frames")
+        print("Removed old frames.")
+        print("Generating original video frames...")
         return frames
 
     @staticmethod
     def process_originals():
         
         #Remove frames_original
-        dir = "frames_original"
+        dir = "frames_output"
         for f in os.listdir(dir):
             os.remove(os.path.join(dir, f))
-        time.sleep(2)
+        time.sleep(1)
         
         for i, original in enumerate(originals):
             video = cv2.VideoCapture(original)
@@ -81,17 +120,10 @@ class Gui:
 
             video.release()
             
-#            Gui.delete_existing_frames()
-if originals != outputs:
-    Gui.process_originals()
 
-import subprocess
-
-#while not (len(os.listdir("frames_original")) == len(os.listdir("frames_output"))):
-#    print("Still processing...")
-    
 if __name__ == "__main__":
     script_name = "start_process.py"
+    print("Generating new altered frames...")
 
     try:
         subprocess.run(["python", script_name], check=True)
