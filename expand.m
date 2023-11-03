@@ -77,4 +77,3 @@ function expand(filename)
     imwrite(uint8(new_im), [output_dir filename]);
     
 end
-
