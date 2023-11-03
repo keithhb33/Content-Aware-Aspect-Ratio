@@ -9,15 +9,15 @@ Uses content-aware image resizing to modernize 4:3 videos to a 16:9 aspect ratio
 </tr>
 <tr>
 <td>
-    
-<a href="https://drive.google.com/file/d/13wTyCyZJ5w0n7JA2GdNkOXXD0atGtwcI/view?usp=drive_link">
+
+<a href="https://drive.google.com/file/d/1gzJvdsADnwfpjM3xvmsNavIsjcBY1hQV/view?usp=sharing">
     <img src="images/original_thumbnail.JPG" alt="Watch the video" height="300">
 </a>
 
 </td>
 <td>
-
-<a href="https://drive.google.com/file/d/1Nk0b3cL6mmpAuTGffQono-C5Ez0-hbbh/view?usp=sharing">
+    
+<a href="https://drive.google.com/file/d/1fQwaDLu7VCPDdkznvBfbMw1uvihccgMW/view?usp=sharing">
     <img src="images/edited_thumbnail.JPG" alt="Watch the video" height="300">
 </a>
 
