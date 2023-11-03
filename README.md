@@ -31,7 +31,7 @@ Uses content-aware image resizing to modernize 4:3 videos to a 16:9 aspect ratio
 #Clone the repository
 git clone https://github.com/keithhb33/Content-Aware-Aspect-Ratio.git
 
- #cd into the directory "Content-Aware-Aspect_Ratio"
+#navigate into the directory "Content-Aware-Aspect_Ratio"
 cd Content-Aware-Aspect_Ratio
 
 #Place .mp4 file in dir "original" (do not place more than a single file at a time)
