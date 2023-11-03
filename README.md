@@ -1,4 +1,4 @@
-# Content-Aware-Aspect-Ratio
+# Content Aware Aspect Ratio
 
 Uses content-aware image resizing to modernize 4:3 videos to a 16:9 aspect ratio with minimal distortion and stretching without losing data.
 
