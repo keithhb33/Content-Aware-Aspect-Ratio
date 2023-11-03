@@ -39,5 +39,5 @@ cd Content-Aware-Aspect_Ratio
 #Run the terminal command:
 python3 main.py
 
-#Note: Frame extractions are very CPU intensive. 24 command-line threads are used to complete the process. 
+#Note: Frame extractions are very CPU intensive. 16 command-line threads are used to complete the process. 
 ```
