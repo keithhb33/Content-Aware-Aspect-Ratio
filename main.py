@@ -124,7 +124,9 @@ class Gui:
 if __name__ == "__main__":
     script_name = "start_process.py"
     print("Generating new altered frames...")
-
+    if len(os.listdir(original_dir)) > 1:
+        print("Ensure only a single file is in 'original' directory")
+        os._exit(0)
     try:
         subprocess.run(["python", script_name], check=True)
     except subprocess.CalledProcessError:
